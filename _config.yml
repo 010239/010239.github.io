@@ -88,7 +88,7 @@ share_button: true #enable share buttons if true
 
 #### Author information
 author:
-  name: yitao      ## e.g. wuchong Author name
+  name: George      ## e.g. wuchong Author name
   intro_line1:  "Hello ,I'm Larry Page in Google."    ## your introduction on the bottom of the page
   intro_line2:  "This is my blog,believe it or not."  ## the 2nd line
   weibo:      ## e.g. wuchong1014 or 2176287895 for http://weibo.com/2176287895
@@ -142,6 +142,7 @@ cnzz_tongji:
   siteid:    ## e.g. 1253575964 your cnzz tongji site id
 
 #### Miscellaneous
+ShowCustomFont: true
 fancybox: true        ## if you use gallery post or want use fancybox please set the value to true.
 totop: true           ## if you want to scroll to top in every post set the value to true
 
