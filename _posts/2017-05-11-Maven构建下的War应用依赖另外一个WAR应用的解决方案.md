@@ -31,3 +31,19 @@ tags:
         <classifier>classes</classifier>
         <scope>provided</scope>
     </dependency>
+
+
+
+ 	或者添加如下内容：
+    <dependencies>
+		<dependency>
+			<groupId>com.xxx</groupId>
+			<artifactId>A-web</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<type>jar</type>
+			<scope>compile</scope>
+			<classifier>api</classifier>
+		</dependency>
+	</dependencies>
+
+    注意以上的依赖中的type属性为jar,而不是默认的war。classifier的值api与A中的classesClassifier的值api要一致。
