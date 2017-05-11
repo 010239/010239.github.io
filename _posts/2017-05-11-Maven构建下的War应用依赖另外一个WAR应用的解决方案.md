@@ -6,6 +6,7 @@ tags:
 
 应用JEECG 3.3.6的过程中，碰到自己的web项目需要依赖JEECG的整个class的问题。解决办法如下:
 (1)在JEECG 3.3.6项目的pom文件中添加如下内容：
+
 			<!-- 把war包中的内容再打成一份 jar包 -->
 			<plugin>
       			<groupId>org.apache.maven.plugins</groupId>
@@ -18,6 +19,7 @@ tags:
   			</plugin>
 
 (2)在自己的web项目的pom文件中添加如下内容：
+
 	<dependency>
         <groupId>org.jeecgframework</groupId>
         <artifactId>jeecgos</artifactId>
