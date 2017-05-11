@@ -6,19 +6,22 @@ tags:
 
 应用JEECG 3.3.6的过程中，碰到自己的web项目需要依赖JEECG的整个class的问题。解决办法如下:
 (1)在JEECG 3.3.6项目的pom文件中添加如下内容：
+
 	{% highlight xml %}
-			<!-- 把war包中的内容再打成一份 jar包 -->
-			<plugin>
-      			<groupId>org.apache.maven.plugins</groupId>
-      			<artifactId>maven-war-plugin</artifactId>
-      			<version>2.3</version>
-      			<configuration>
-       				<attachClasses>true</attachClasses><!-- 把class打包jar作为附件 -->
-          			<archiveClasses>true</archiveClasses><!-- 把class打包jar -->
-      			</configuration>
-  			</plugin>
+	<!-- 把war包中的内容再打成一份 jar包 -->
+	<plugin>
+    	<groupId>org.apache.maven.plugins</groupId>
+    	<artifactId>maven-war-plugin</artifactId>
+    	<version>2.3</version>
+    	<configuration>
+    		<attachClasses>true</attachClasses><!-- 把class打包jar作为附件 -->
+    		<archiveClasses>true</archiveClasses><!-- 把class打包jar -->
+    	</configuration>
+  	</plugin>
   	{% endhighlight %}
+
 (2)在自己的web项目的pom文件中添加如下内容：
+
 	{% highlight xml %}
 	<dependency>
         <groupId>org.jeecgframework</groupId>
@@ -49,5 +52,5 @@ tags:
 			</dependency>
 		</dependencies>
 	{% endhighlight %}
-	
+
     注意以上的依赖中的type属性为jar,而不是默认的war。classifier的值api与A中的classesClassifier的值api要一致。
